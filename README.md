@@ -1,15 +1,19 @@
+# Практическое задание 1
 ## Описание: 
-Лаба 1
+ 1
 Развертывание `Minikube`. Работа с манифестами
 
 ## Этапы выполнения 
 
 1. Произведите развертывание системы `minikube` на рабочем компьютере или виртуальной машине.
 
-![[Pasted image 20250226182413.png]]
+![image](https://github.com/user-attachments/assets/37c9cb1d-b167-4c2d-98e8-c0b9d6af50b7)
 
 
-1. Cоздайте файл `pod.yaml` и скопируйте в него следующий манифест:. ![[Pasted image 20250226182534.png]]
+
+1. Cоздайте файл `pod.yaml` и скопируйте в него следующий манифест:.
+![image](https://github.com/user-attachments/assets/2a93900c-1237-44c7-a893-ff1bcb1537a1)
+
 
 Тело ошибки связанное с синтаксисом нет отступа в виде `-`:
 
@@ -20,7 +24,9 @@ Error from server (BadRequest): error when creating "pod.yaml": Pod in version "
 ```
 
 1.  Запустите pod redis в кластере с помощью команды: `kubectl run redis -- image=redis:5.0 -n default`
-![[Pasted image 20250226182854.png]]
+![image](https://github.com/user-attachments/assets/efb106fb-326a-4c00-8a6f-5eb4ccb9704e)
 
-Логи
-![[Pasted image 20250226183048.png]]
+
+Логи скрин
+![image](https://github.com/user-attachments/assets/bce7b56d-e083-482e-9317-44d4c66f2853)
+
