@@ -11,6 +11,7 @@
 
 
 2. Cоздайте файл `pod.yaml` и скопируйте в него следующий манифест:.
+
 ![image](https://github.com/user-attachments/assets/2a93900c-1237-44c7-a893-ff1bcb1537a1)
 
 
@@ -23,10 +24,12 @@ Error from server (BadRequest): error when creating "pod.yaml": Pod in version "
 ```
 
 3.  Запустите pod redis в кластере с помощью команды: `kubectl run redis -- image=redis:5.0 -n default`
+   
 ![image](https://github.com/user-attachments/assets/efb106fb-326a-4c00-8a6f-5eb4ccb9704e)
 
 
 Логи скрин
+
 ![image](https://github.com/user-attachments/assets/bce7b56d-e083-482e-9317-44d4c66f2853)
 
 
