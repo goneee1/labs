@@ -23,7 +23,8 @@
 Error from server (BadRequest): error when creating "pod.yaml": Pod in version "v1" cannot be handled as a Pod: json: cannot unmarshal object into Go struct field PodSpec.spec.containers of type []v1.Container
 ```
 
-3.  Запустите pod redis в кластере с помощью команды: `kubectl run redis -- image=redis:5.0 -n default`
+3.  Запустите pod redis в кластере с помощью команды: 
+`kubectl run redis -- image=redis:5.0 -n default`
    
 ![image](https://github.com/user-attachments/assets/efb106fb-326a-4c00-8a6f-5eb4ccb9704e)
 
@@ -36,7 +37,7 @@ Error from server (BadRequest): error when creating "pod.yaml": Pod in version "
 # Практическое задание 2
 ## Описание: 
 Развертывание инфраструктуры c помощью Terraform.
-**Все файлы и конфиги прикреплены в репозитории, если хотите получить доступ к машинам для проверки запросите пароль от архива на корпоративную почту или в тг @ggmozz ** публчиный ip машины 84.201.132.135 user:centos
+**Все файлы и конфиги прикреплены в репозитории, если хотите получить доступ к машинам для проверки запросите пароль от архива на корпоративную почту или в тг `@ggmozz` ** публчиный ip машины `84.201.132.135` `user:centos`
 <img width="846" alt="ssh_connect" src="https://github.com/user-attachments/assets/e42f10cc-4eff-4752-bd1c-8c78fd3e33cb" />
 <img width="919" alt="terraform" src="https://github.com/user-attachments/assets/5cb10750-8f7b-467d-8907-76529c383633" />
 
