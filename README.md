@@ -40,3 +40,37 @@ Error from server (BadRequest): error when creating "pod.yaml": Pod in version "
 <img width="846" alt="ssh_connect" src="https://github.com/user-attachments/assets/e42f10cc-4eff-4752-bd1c-8c78fd3e33cb" />
 <img width="919" alt="terraform" src="https://github.com/user-attachments/assets/5cb10750-8f7b-467d-8907-76529c383633" />
 
+# Практическое задание 3 
+## Описание:
+Работа с системой Docker
+Докерфайл прикреплён в репозитории лабы
+Скрин с работой докера и его доступностью
+![image](https://github.com/user-attachments/assets/db4130f7-eb1c-442e-aac6-bcadde8bb056)
+
+## Настройка:
+1. Создать dockerfile с содердимым конфига.
+   Содержимое:
+   ```FROM ubuntu:latest
+
+RUN apt update && apt install -y wget curl nginx
+
+COPY index.html /var/www/html/index.html
+
+EXPOSE 80 443
+
+CMD ["nginx", "-g", "daemon off;"]
+```
+2. Билдим докер образ
+`sudo docker buid -t dockerfile .`
+3. Проверяем что на наших портах 80 и 443 не запущены другие сервисы
+`sudo lsof -i :80,443`
+4. Запускаем наш docker контейнер:
+`sudo docker run -d -p 80:80 -p 443:443 dockerfile:latest`
+5. Проверяем работоспособность докера
+`sudo docker ps -a`
+
+
+
+
+
+
