@@ -30,3 +30,11 @@ Error from server (BadRequest): error when creating "pod.yaml": Pod in version "
 Логи скрин
 ![image](https://github.com/user-attachments/assets/bce7b56d-e083-482e-9317-44d4c66f2853)
 
+
+# Практическое задание 2
+## Описание: 
+Развертывание инфраструктуры c помощью Terraform.
+**Все файлы и конфиги прикреплены в репозитории, если хотите получить доступ к машинам для проверки отправьте публичный ssh ключ на корпоративную почту или в тг @ggmozz **
+<img width="846" alt="ssh_connect" src="https://github.com/user-attachments/assets/e42f10cc-4eff-4752-bd1c-8c78fd3e33cb" />
+<img width="919" alt="terraform" src="https://github.com/user-attachments/assets/5cb10750-8f7b-467d-8907-76529c383633" />
+
