@@ -36,7 +36,7 @@ Error from server (BadRequest): error when creating "pod.yaml": Pod in version "
 # Практическое задание 2
 ## Описание: 
 Развертывание инфраструктуры c помощью Terraform.
-**Все файлы и конфиги прикреплены в репозитории, если хотите получить доступ к машинам для проверки запросите пароль от архива на корпоративную почту или в тг @ggmozz **
+**Все файлы и конфиги прикреплены в репозитории, если хотите получить доступ к машинам для проверки запросите пароль от архива на корпоративную почту или в тг @ggmozz ** публчиный ip машины 84.201.132.135 user:centos
 <img width="846" alt="ssh_connect" src="https://github.com/user-attachments/assets/e42f10cc-4eff-4752-bd1c-8c78fd3e33cb" />
 <img width="919" alt="terraform" src="https://github.com/user-attachments/assets/5cb10750-8f7b-467d-8907-76529c383633" />
 
@@ -69,6 +69,40 @@ CMD ["nginx", "-g", "daemon off;"]
 `sudo docker run -d -p 80:80 -p 443:443 dockerfile:latest`
 5. Проверяем работоспособность докера
 `sudo docker ps -a`
+### 2 часть создание субд в докере 
+1. Команда для создания БД sql:
+```mysql
+-- testdb.sql
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100),
+    email VARCHAR(100) UNIQUE
+);
+
+INSERT INTO users (name, email) VALUES
+('Alice', 'alice@example.com'),
+('Bob', 'bob@example.com');
+```
+2. Запускаем докер postgres на базовом порту с установкой пароля и пользователя 
+```  
+ sudo docker run -d \
+  --name postgres_db \
+  -e POSTGRES_USER=user \
+  -e POSTGRES_PASSWORD=password \
+  -e POSTGRES_DB=testdb \
+  -p 5432:5432 \
+  postgres:latest
+```
+3. Выполнение sql команд в бд testdb 
+`sudo cat test.sql | sudo docker exec -i postgres_db psql -U admin -d testdb`
+
+4. Подключние к бд
+`docker exec -it postgres_db psql -U admin -d testdb`
+
+5. Проверка
+![image](https://github.com/user-attachments/assets/0536ad64-019d-4524-89d5-3390e0001266)
+
+
 
 
 
