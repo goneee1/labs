@@ -50,7 +50,8 @@ Error from server (BadRequest): error when creating "pod.yaml": Pod in version "
 ## Настройка:
 1. Создать dockerfile с содердимым конфига.
    Содержимое:
-   ```FROM ubuntu:latest
+```
+FROM ubuntu:latest
 
 RUN apt update && apt install -y wget curl nginx
 
