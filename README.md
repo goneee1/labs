@@ -44,8 +44,9 @@ Error from server (BadRequest): error when creating "pod.yaml": Pod in version "
 # Практическое задание 3 
 ## Описание:
 Работа с системой Docker
-Докерфайл прикреплён в репозитории лабы
-Скрин с работой докера и его доступностью
+`Dockerfile` прикреплён в репозитории.
+
+**Скрин с работой докера и его доступностью**
 ![image](https://github.com/user-attachments/assets/db4130f7-eb1c-442e-aac6-bcadde8bb056)
 
 ## Настройка:
